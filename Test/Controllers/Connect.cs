@@ -19,7 +19,10 @@ namespace Test.Controllers
             _db = "testdb";
             _user = "root";
             _password = "password";
-            ConnectionString = $"SERVER={_host};DATABASE={_db};UID={_user};PASSWRD={_password};";
+            ConnectionString = $"SERVER={_host};DATABASE={_db};UID={_user};PASSWRD={_password};SslMode=none";
+
+            Connection = new MySqlConnection(ConnectionString);
+
 
 
         }
